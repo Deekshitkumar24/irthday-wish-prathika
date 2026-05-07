@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Prathika! 🎂</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating Elements Container -->
+    <div class="floating-elements" id="floatingElements"></div>
+    
+    <!-- Confetti Canvas -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <!-- Welcome Screen -->
+    <div class="welcome-screen" id="welcomeScreen">
+        <div class="gift-box" id="giftBox">
+            <div class="gift-lid">
+                <div class="gift-bow"></div>
+            </div>
+            <div class="gift-body"></div>
+        </div>
+        <p class="tap-text">✨ Tap the gift to open ✨</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-sparkles" id="heroSparkles"></div>
+            <div class="hero-content">
+                <p class="hero-pre">🎀 A Special Day for a Special Person 🎀</p>
+                <h1 class="hero-title">Happy Birthday</h1>
+                <h2 class="hero-name">Prathika! 🎂</h2>
+                <div class="hero-hearts">💖 💗 💖</div>
+            </div>
+        </section>
+
+        <!-- Teddy Bear Section -->
+        <section class="teddy-section">
+            <div class="section-title">
+                <span class="emoji-lg">🧸</span>
+                <h2>A Teddy Bear Hug For You!</h2>
+            </div>
+            <div class="teddy-card">
+                <div class="teddy-emoji">🧸</div>
+                <p class="teddy-msg">Sending you the biggest, warmest teddy bear hug on your special day! Just like a teddy bear, our friendship is soft, warm, and always comforting. 🤗💕</p>
+                <div class="teddy-hearts">
+                    <span>💝</span><span>💝</span><span>💝</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wishes Section -->
+        <section class="wishes-section">
+            <div class="section-title">
+                <span class="emoji-lg">🌸</span>
+                <h2>Birthday Wishes</h2>
+            </div>
+            <div class="wishes-grid">
+                <div class="wish-card" style="--delay: 0.1s">
+                    <div class="wish-icon">🌷</div>
+                    <p>May your day bloom with happiness, just like the prettiest flowers in a garden! 🌺</p>
+                </div>
+                <div class="wish-card" style="--delay: 0.2s">
+                    <div class="wish-icon">⭐</div>
+                    <p>May all your dreams and wishes come true this year. You deserve every bit of happiness! ✨</p>
+                </div>
+                <div class="wish-card" style="--delay: 0.3s">
+                    <div class="wish-icon">🦋</div>
+                    <p>May your life be as beautiful and colorful as a butterfly's wings! You're truly amazing! 🌈</p>
+                </div>
+                <div class="wish-card" style="--delay: 0.4s">
+                    <div class="wish-icon">🎀</div>
+                    <p>Wishing you a year wrapped in love, laughter, and all the things that make you smile! 😊</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Things You Deserve Section -->
+        <section class="deserve-section">
+            <div class="section-title">
+                <span class="emoji-lg">🎁</span>
+                <h2>Things You Deserve Today</h2>
+            </div>
+            <div class="deserve-list">
+                <div class="deserve-item"><span>🍰</span> The most delicious cake in the world</div>
+                <div class="deserve-item"><span>🌹</span> A million beautiful roses</div>
+                <div class="deserve-item"><span>🧸</span> The biggest teddy bear ever</div>
+                <div class="deserve-item"><span>🍫</span> Unlimited chocolates</div>
+                <div class="deserve-item"><span>👑</span> A crown, because you're a queen</div>
+                <div class="deserve-item"><span>🎵</span> Your favorite songs on repeat</div>
+                <div class="deserve-item"><span>💐</span> Bouquets of fresh flowers</div>
+                <div class="deserve-item"><span>😄</span> Non-stop smiles and laughter</div>
+            </div>
+        </section>
+
+        <!-- Friendship Section -->
+        <section class="friendship-section">
+            <div class="section-title">
+                <span class="emoji-lg">💌</span>
+                <h2>A Little Note For You</h2>
+            </div>
+            <div class="letter-card">
+                <div class="letter-header">Dear Prathika,</div>
+                <p>We may only talk on birthdays, but that doesn't make our friendship any less special. 😊</p>
+                <p>Some friendships don't need daily conversations — they just stay strong in the heart. And ours is one of those! 💛</p>
+                <p>I hope this birthday brings you everything you've been wishing for. You're an amazing person, and you deserve all the happiness in the world! 🌟</p>
+                <p>Keep being the wonderful person you are. The world is brighter because of you! ✨</p>
+                <div class="letter-footer">
+                    <p>With lots of love & warm wishes,</p>
+                    <p class="letter-sign">Your Friend 💕</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cake Section -->
+        <section class="cake-section">
+            <div class="section-title">
+                <span class="emoji-lg">🎂</span>
+                <h2>Make a Wish & Blow the Candles!</h2>
+            </div>
+            <div class="cake-container">
+                <div class="cake-display">
+                    <div class="candles" id="candles">
+                        <div class="candle"><div class="flame" id="flame1">🔥</div></div>
+                        <div class="candle"><div class="flame" id="flame2">🔥</div></div>
+                        <div class="candle"><div class="flame" id="flame3">🔥</div></div>
+                    </div>
+                    <div class="cake-emoji">🎂</div>
+                </div>
+                <button class="blow-btn" id="blowBtn">🌬️ Blow the Candles!</button>
+                <div class="wish-reveal" id="wishReveal">
+                    <p>🎉 Your wish will come true! 🎉</p>
+                    <p class="wish-sub">Happy Birthday Prathika! 🥳💖</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Section -->
+        <section class="final-section">
+            <div class="final-content">
+                <div class="final-emojis">🎀🧸🌸💖🎂💐🦋✨👑🌹</div>
+                <h2>Happy Birthday Once Again, Prathika!</h2>
+                <p>May this year be your best one yet! 🥂🎉</p>
+                <div class="final-emojis">🌹👑✨🦋💐🎂💖🌸🧸🎀</div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
