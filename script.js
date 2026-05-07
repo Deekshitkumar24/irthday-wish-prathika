@@ -127,6 +127,20 @@ blowBtn.addEventListener('click', () => {
     }, 1200);
 });
 
+// ===== GIFT REVEAL =====
+function revealGift(card) {
+    if (card.classList.contains('revealed')) return;
+    card.classList.add('revealed');
+    // Mini confetti burst for each gift
+    for (let i = 0; i < 40; i++) {
+        setTimeout(() => confettiPieces.push(new Confetti()), i * 15);
+    }
+    if (!confettiActive) {
+        confettiActive = true;
+        animateConfetti();
+    }
+}
+
 // ===== SCROLL ANIMATIONS =====
 const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -50px 0px' };
 const observer = new IntersectionObserver((entries) => {
@@ -138,7 +152,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-document.querySelectorAll('.teddy-section, .wishes-section, .deserve-section, .friendship-section, .cake-section, .final-section').forEach(el => {
+document.querySelectorAll('.teddy-section, .wishes-section, .deserve-section, .friendship-section, .gifts-section, .cake-section, .final-section').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(40px)';
     el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
